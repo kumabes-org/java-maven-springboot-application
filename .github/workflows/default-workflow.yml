@@ -24,8 +24,10 @@ jobs:
       runs-on: "ubuntu-latest"
       environment: "production"
       working-directory: "app"
-      shell: "bash"    
+      shell: "bash"
       project-name: "java-maven-springboot-application"
+      language: "java"
+      build: "maven"
     secrets: inherit
 
   call-workflow-codeql:
@@ -36,7 +38,7 @@ jobs:
       runs-on: "ubuntu-latest"
       environment: "production"
       working-directory: "app"
-      shell: "bash"    
+      shell: "bash"
       project-name: "java-maven-springboot-application"
       languages: "java"
     secrets: inherit
